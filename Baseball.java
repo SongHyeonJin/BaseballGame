@@ -19,7 +19,7 @@ public class Baseball {
             }
         }
 
-        // com 랜덤값 확인
+//        com 랜덤값 확인
 //        for (int x : com
 //        ) {
 //            System.out.println(x);
@@ -47,20 +47,24 @@ public class Baseball {
 
             if(ball == 3){
                 System.out.println(ball + "B");
-            }else{
-                System.out.println(ball + "B" + strike + "S");
-            }
-            totalGame++;
-            if (strike == 3) {
+                strike = 0;
+                ball = 0;
+                totalGame++;
+            }else if(strike == 3) {
                 System.out.println(strike+"S");
+                totalGame++;
                 System.out.println(totalGame + "번 만에 맞히셨습니다.");
                 System.out.println("게임을 종료합니다.");
                 break;
-            }else{
+            }else {
+                System.out.println(ball + "B" + strike + "S");
                 strike = 0;
                 ball = 0;
+                totalGame++;
             }
         }
+
+
     }
 }
 
